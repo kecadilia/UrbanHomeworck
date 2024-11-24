@@ -1,18 +1,15 @@
-# module_1_5.py
-
-# 2. Задайте переменные разных типов данных
-# Создание кортежа (неизменяемый объект)
-immutable_var = (1, "apple", 3.14, True)
-
-# Вывод кортежа на экран
+immutable_var = (1, 2, 'a', 'b')
 print("Кортеж immutable_var:", immutable_var)
-
-# 3. Изменение значений переменных
 try:
-    # Попытка изменить элемент кортежа
-    immutable_var[0] = 10  # Это вызовет ошибку
+    immutable_var[0] = 10
 except TypeError as e:
     print("Ошибка:", e)
     print("Нельзя изменить элементы кортежа, так как кортежи являются неизменяемыми объектами в Python.")
+
+immutable_var = [1, 2, 'a', 'b', 'Modified']
+print(immutable_var)
+immutable_var[0] = 10
+immutable_var[4] = "world"
+print("Изменённый список:", immutable_var)
 
 
