@@ -1,13 +1,20 @@
-immutable_var = (1, 2, 'a', 'b')
-print("Кортеж immutable_var:", immutable_var)
-try:
-    immutable_var[0] = 10
-except TypeError as e:
-    print("Ошибка:", e)
-    print("Нельзя изменить элементы кортежа, так как кортежи являются неизменяемыми объектами в Python.")
+# Создание множества
+numbers = {1, 2, 3, 4, 5}
 
-immutable_var = [1, 2, 'a', 'b', 'Modified']
-print(immutable_var)
-immutable_var[0] = 10
-immutable_var[4] = "world"
-print("Изменённый список:", immutable_var)
+# Добавление элементов
+numbers.add(6)
+
+# Удаление элемента
+numbers.discard(2)
+
+# Перебор множества
+for number in numbers:
+    print(number)
+
+# Операции с множествами
+another_set = {4, 5, 6, 7}
+union_set = numbers.union(another_set)  # Объединение
+intersection_set = numbers.intersection(another_set)  # Пересечение
+
+print("Объединение:", union_set)
+print("Пересечение:", intersection_set)
